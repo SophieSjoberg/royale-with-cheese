@@ -10,7 +10,8 @@ I would like to be able to perform a transaction
 
   @javascript @stripe
   Scenario: User can perform transaction
-    When I click "Pay with card" button
+    Given I visit the "Landing" page
+    When I click "Pay with Card" button
     And I fill in stripe form field "Email" with "cutie123@hotmail.com "
     And I fill in stripe form field "Card number" with "4242 4242 4242 4242"
     And I fill in stripe form field "Expiry" with "12/2021"
