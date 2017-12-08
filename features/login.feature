@@ -19,7 +19,7 @@ Feature: Visitor Login
     And I should see "Logged in as, hotmale@hotmail.com"
     And I should see "Logout"
     And I should see "Signed in successfully."
-
+    
 
   Scenario: Visitor does not fill in Email [Sad Path]
     When I fill in "Password" with "cutie123"

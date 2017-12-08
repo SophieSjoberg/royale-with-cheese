@@ -12,7 +12,9 @@ class ChargesController < ApplicationController
       description: 'Donate 10 sek',
       currency: 'sek'
     )
-    flash[:notice] = "Thanks for your donation!"
-    redirect_to root_path
+    if charge.paid?
+      message = "Thanks for your donation!"
+    end
+    redirect_to root_path, notice: message
   end
 end
