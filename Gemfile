@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'stripe-rails'
 gem 'devise'
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
@@ -18,6 +19,8 @@ gem 'themoviedb-api', '~> 1.2'
 gem 'dotenv-rails'
 
 group :development, :test do
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
