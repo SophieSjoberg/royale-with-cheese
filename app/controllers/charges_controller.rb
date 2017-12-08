@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
     charge = Stripe::Charge.create(
       customer: customer.id,
       amount: @amount,
-      description: 'Donate 10 sek'
+      description: 'Donate 10 sek',
       currency: 'sek'
     )
   end

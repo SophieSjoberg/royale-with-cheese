@@ -12,10 +12,10 @@ I would like to be able to perform a transaction
   Scenario: User can perform transaction
     Given I visit the "Landing" page
     When I click "Pay with Card" button
-    And I fill in stripe form field "Email" with "cutie123@hotmail.com "
+    And I fill in stripe form field "Email" with "cutie123@hotmail.com"
     And I fill in stripe form field "Card number" with "4242 4242 4242 4242"
     And I fill in stripe form field "Expiry" with "12/2021"
     And I fill in stripe form field "CVC" with "123"
     And I submit the stripe form
-    Then I should be redirected to the "Landing" page
-    And I should see "Thank you for your purchase"
+    Then I should be redirected to the "Charges" page
+    And I should see "Thanks for your donation!"

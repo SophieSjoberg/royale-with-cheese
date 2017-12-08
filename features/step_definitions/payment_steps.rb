@@ -10,10 +10,6 @@ When("I fill in stripe form field {string} with {string}") do |field, value|
   end
 end
 
-Then("show me the page") do
-  save_and_open_page
-end
-
 And(/^I submit the stripe form$/) do
   within_frame @stripe_iframe do
     find('.Section-button').click
