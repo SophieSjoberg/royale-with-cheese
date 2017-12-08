@@ -12,5 +12,7 @@ class ChargesController < ApplicationController
       description: 'Donate 10 sek',
       currency: 'sek'
     )
+    flash[:notice] = "Thanks for your donation!"
+    redirect_to root_path
   end
 end

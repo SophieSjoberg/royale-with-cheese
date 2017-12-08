@@ -8,14 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= flash.each do |name, msg| %>
+    <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "flash_#{name}" %>
     <% end %>
     <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path)  %>
     <%= render 'layouts/nav' %>
-    <% end %>
-    <% if flash[:notice] %>
-      <%= flash[:notice] %>
     <% end %>
     <%= yield %>
   </body>

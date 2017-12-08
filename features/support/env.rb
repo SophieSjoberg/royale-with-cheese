@@ -21,7 +21,7 @@ World(FactoryBot::Syntax::Methods)
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
       chromeOptions: {
-          args: %w[ no-sandbox disable-popup-blocking disable-gpu window-size=1280,1024]
+          args: %w[ headless no-sandbox disable-popup-blocking disable-gpu window-size=1280,1024]
       }
   )
 
