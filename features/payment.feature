@@ -8,10 +8,6 @@ I would like to be able to perform a transaction
       | email                  | password    | password_confirmation |
       | cutie123@hotmail.com   | hello123    | hello123              |
 
-    And the following products exists in the system
-      | product      | price  |
-      | something    | $5     |
-
   @javascript
   Scenario: User can perform transaction
     When I click "Pay with card" button

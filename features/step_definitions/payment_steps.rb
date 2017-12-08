@@ -1,16 +1,18 @@
-Given("the following products exists in the system") do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
+When("I click {string} button") do |button|
+  click_button button
+  sleep(2)
+  @stripe_iframe = all('iframe[name=stripe_checkout_app]').last
 end
 
-When("I click {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill in stripe form field {string} with {string}") do |field, value|
+  within_frame @stripe_iframe do
+    fill_in field, with: value
+  end
 end
 
-When("I fill in stripe form field {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("I submit the stripe form") do
-  pending # Write code here that turns the phrase above into concrete actions
+And(/^I submit the stripe form$/) do
+  within_frame @stripe_iframe do
+    find('.Section-button').click
+  end
+  sleep(5)
 end
