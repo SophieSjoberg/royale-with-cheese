@@ -14,3 +14,7 @@ Before("@tmdb") do
 
   stub_request(:get, movies_url).to_return(status: 200, body: body)
 end
+
+Before ('@stripe') do
+  WebMock.disable!
+end

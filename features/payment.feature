@@ -8,7 +8,7 @@ I would like to be able to perform a transaction
       | email                  | password    | password_confirmation |
       | cutie123@hotmail.com   | hello123    | hello123              |
 
-  @javascript
+  @javascript @stripe
   Scenario: User can perform transaction
     When I click "Pay with card" button
     And I fill in stripe form field "Email" with "cutie123@hotmail.com "
