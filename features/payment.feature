@@ -1,7 +1,7 @@
 Feature: User can pay for products
-  As a user
-  In order to pay for products
-  I would like to be able to purchase products with a transaction
+As a user
+In order for me to pay for my products
+I would like to be able to perform a transaction
 
   Background:
     Given the following user exists
@@ -13,15 +13,12 @@ Feature: User can pay for products
       | something    | $5     |
 
   @javascript
-  Scenario: User can click on "purchase" link
-    When I click on the "Shop" button or link
-    Then I should be redirected to the "Shop" page
-    And I should see "Buy this product"
-    When I click on the "Buy" button or link
-    And I click the "Pay with Card" stripe button
+  Scenario: User can perform transaction
+    When I click "Pay with card" button
+    And I fill in stripe form field "Email" with "cutie123@hotmail.com "
     And I fill in stripe form field "Card number" with "4242 4242 4242 4242"
-    And I fill in stripe form field "CVC" with "123"
     And I fill in stripe form field "Expiry" with "12/2021"
+    And I fill in stripe form field "CVC" with "123"
     And I submit the stripe form
-    Then I should be redirected to the "Shop" page
+    Then I should be redirected to the "Landing" page
     And I should see "Thank you for your purchase"

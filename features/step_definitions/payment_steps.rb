@@ -3,7 +3,7 @@ Given("the following products exists in the system") do |table|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When("I click the {string} stripe button") do |string|
+When("I click {string} button") do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
