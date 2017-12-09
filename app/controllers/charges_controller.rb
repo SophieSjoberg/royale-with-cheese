@@ -25,7 +25,7 @@ class ChargesController < ApplicationController
     if charge.paid?
       message = 'Your transaction was successful!'
     else
-      message = 'Something went wrong!'
+      redirect_to root_path
     end
       redirect_to root_path, notice: message
   end
