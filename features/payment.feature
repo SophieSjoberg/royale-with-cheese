@@ -18,5 +18,4 @@ I would like to be able to perform a transaction
     And I fill in stripe form field "CVC" with "123"
     And I submit the stripe form
     Then I should be redirected to the "Landing" page
-    # And show me the page
-    And I should see "message!"
+    And I should see "Your transaction was successful!"
