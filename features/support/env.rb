@@ -2,7 +2,7 @@ require 'coveralls'
 Coveralls.wear_merged!('rails')
 
 require 'cucumber/rails'
-require 'webmock/cucumber'
+# require 'webmock/cucumber'
 
 ActionController::Base.allow_rescue = false
 
@@ -21,7 +21,7 @@ World(FactoryBot::Syntax::Methods)
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
       chromeOptions: {
-          args: %w[ headless no-sandbox disable-popup-blocking disable-gpu window-size=1280,1024]
+          args: %w[ no-sandbox disable-popup-blocking disable-gpu window-size=1280,1024]
       }
   )
 

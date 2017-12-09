@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'stripe'
+gem 'stripe-rails'
 gem 'devise'
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
@@ -16,9 +16,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'themoviedb-api', '~> 1.2'
-gem 'dotenv-rails'
+
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'pry-rails'
@@ -32,6 +33,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'webmock'
   gem 'awesome_print'
+  gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
 end
 
 group :development do

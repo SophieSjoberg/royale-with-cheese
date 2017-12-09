@@ -16,3 +16,7 @@ And(/^I submit the stripe form$/) do
   end
   sleep(10)
 end
+
+Then("I should be on the {string} page") do |string|
+  visit root_path
+end
