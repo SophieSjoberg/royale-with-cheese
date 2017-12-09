@@ -14,9 +14,9 @@ And(/^I submit the stripe form$/) do
   within_frame @stripe_iframe do
     find('.Section-button').click
   end
-  sleep(10)
+  sleep(5)
 end
 
-Then("I should be on the {string} page") do |string|
-  visit root_path
+Then("I should not see {string}") do |content|
+  expect(page).not_to have_content
 end

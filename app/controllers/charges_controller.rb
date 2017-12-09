@@ -15,19 +15,11 @@ class ChargesController < ApplicationController
       description: '',
       currency: 'sek'
     )
-<<<<<<< HEAD
-    if charge.paid?
-      message = "Thanks for your donation!"
-    end
-    redirect_to root_path, notice: message
-=======
 
     if charge.paid?
       message = 'Your transaction was successful!'
-    else
-      redirect_to root_path
-    end
       redirect_to root_path, notice: message
+    end
   end
 
   private
@@ -41,6 +33,5 @@ class ChargesController < ApplicationController
 
   def check_env
     StripeMock.start if Rails.env.test?
->>>>>>> fb18a54500c91dd5e53ac45314b88c13a7960885
   end
 end
