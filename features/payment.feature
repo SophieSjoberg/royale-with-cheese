@@ -19,3 +19,14 @@ I would like to be able to perform a transaction
     And I submit the stripe form
     Then I should be redirected to the "Landing" page
     And I should see "Your transaction was successful!"
+
+  @javascript @stripe
+  Scenario: User can NOT write the wrong credentials
+    Given I visit the "Landing" page
+    When I fill in stripe form field "Email" with "cutie123@hotmail"
+    And I fill in stripe form field "Card number" with "xxxx xxxx xxxx xxxx xxxx"
+    And I fill in stripe form field "Expiry" with "12/202"
+    And I fill in stripe form field "CVC" with "12"
+    And I submit the stripe form
+    Then I should be redirected to the "Landing" page
+    And I should see "Something went wrong!"
