@@ -33,6 +33,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'webmock'
   gem 'awesome_print'
+  gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
 end
 
 group :development do
