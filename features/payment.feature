@@ -18,4 +18,5 @@ I would like to be able to perform a transaction
     And I fill in stripe form field "CVC" with "123"
     And I submit the stripe form
     Then I should be redirected to the "Landing" page
-    And I should see "Thanks for your donation!"
+    # And show me the page
+    And I should see "message!"

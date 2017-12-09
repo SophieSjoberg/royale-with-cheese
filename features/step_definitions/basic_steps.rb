@@ -18,6 +18,10 @@ Then("I should be redirected to the {string} page") do |page_name|
   expect(page.current_path).to eq page_path_from(page_name)
 end
 
+Then("show me the page") do
+  save_and_open_page 
+end
+
 
 def page_path_from(page_name)
   case page_name.downcase

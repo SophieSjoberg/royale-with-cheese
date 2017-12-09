@@ -1,6 +1,9 @@
 class ChargesController < ApplicationController
+  def new
+  end
   def create
     @amount = 1000
+    binding.pry
     customer = Stripe::Customer.create(
       email: params[:stripeEmail],
       source: params[:stripeToken]
@@ -12,7 +15,14 @@ class ChargesController < ApplicationController
       description: 'Donate 10 sek',
       currency: 'sek'
     )
-    flash[:notice] = "Thanks for your donation!"
-    redirect_to root_path
-  end
+    binding.pry
+    if charge.paid?
+        # current_user.update_attribute(:customer, true)
+        message = 'message!'
+      else
+        message = 'error!'
+      end
+      redirect_to root_path, notice: message
+    end
+
 end
