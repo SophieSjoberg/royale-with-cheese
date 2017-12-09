@@ -1,11 +1,15 @@
+<div class="header text-center text-warning">
+  <h1>Royale with Cheese</h1>
+  <h2>Movie suggestions</h2>
+  <img src="https://www.300feetout.com/wp-content/uploads/2016/12/holiday_2016_popcorn_cheese.jpg" width="385px" height="320px"/>
+</div>
+  <nav class="navbar navbar-light">
+    <%= form_tag(search_path, class: 'form-inline') do %>
+      <%= text_field_tag :genre, "", class: 'movie-input form-control', placeholder: 'Movie Genre' %>
+      <%= submit_tag 'Search', class: 'movie-input btn btn-outline-primary my-2 my-sm-0' %>
+    <% end %>
+  </nav>
 
-<h1>Royale with Cheese</h1>
-<p>Movie suggestions</p>
-
-<%= form_tag(search_path) do %>
-  <%= text_field_tag :genre %>
-  <%= submit_tag 'search' %>
-<% end %>
 
 <% if @movies %>
   <% if @movies.results.any? %>

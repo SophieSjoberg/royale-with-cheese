@@ -7,7 +7,7 @@ Feature: Movie generator
   Scenario:
     When I visit the landing page
     And I fill in "genre" with "action"
-    And I click on "search" button
+    And I click on "Search" button
     Then I should see "Thor: Ragnarok"
     And I should see "Sleight"
 
@@ -15,5 +15,5 @@ Feature: Movie generator
   Scenario: User input wrong keywords
     When I visit the landing page
     And I fill in "genre" with "sadsadcomedy"
-    And I click on "search" button
+    And I click on "Search" button
     Then I should see "wrong entry"
