@@ -18,5 +18,5 @@ And(/^I submit the stripe form$/) do
 end
 
 Then("I should not see {string}") do |content|
-  expect(page).not_to have_content
+  expect(page).not_to have_content content
 end
