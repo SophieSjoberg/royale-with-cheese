@@ -3,7 +3,7 @@ class ChargesController < ApplicationController
   end
   def create
     @amount = 1000
-    binding.pry
+    
     customer = Stripe::Customer.create(
       email: params[:stripeEmail],
       source: params[:stripeToken]
@@ -15,7 +15,7 @@ class ChargesController < ApplicationController
       description: 'Donate 10 sek',
       currency: 'sek'
     )
-    binding.pry
+
     if charge.paid?
         # current_user.update_attribute(:customer, true)
         message = 'message!'
