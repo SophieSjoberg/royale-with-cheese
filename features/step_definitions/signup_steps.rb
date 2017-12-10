@@ -22,5 +22,6 @@ def page_path_from(page_name)
     when 'landing' then root_path
     when 'sign up' then new_user_registration_path
     when 'login' then new_user_session_path
+    when 'webshop' then webshop_show_path
   end
 end
