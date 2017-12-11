@@ -16,8 +16,6 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World(FactoryBot::Syntax::Methods)
 
-# Chromedriver.set_version '2.33'
-
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
       chromeOptions: {
