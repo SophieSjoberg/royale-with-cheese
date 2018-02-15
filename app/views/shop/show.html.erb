@@ -1,0 +1,16 @@
+<div class="header text-center text-warning">
+  <h1>Welcome to the Royale Shop</h1>
+</div>
+
+<div class="products">
+  <% @products.each do |product| %>
+  <div id="product-<%= product.id %>">
+    <%= "#{product.title} - #{product.description} - #{product.price}" %>
+    <% if session[:cart_id] %>
+      <%= link_to 'Add to cart', shopping_cart_path(session[:cart_id], product_id: product), method: :put %>
+    <% else %>
+      <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :post %>
+    <% end %>
+  </div>
+  <% end %>
+</div>

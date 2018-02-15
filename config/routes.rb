@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'webshop/show'
+  get 'shop/show'
 
   devise_for :users
   root controller: :landing, action: :index
