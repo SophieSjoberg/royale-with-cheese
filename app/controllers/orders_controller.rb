@@ -26,6 +26,6 @@ class OrdersController < ApplicationController
   end
 
   def redirect_back_with_notice
-    redirect_back(fallback_location: root_path, notice: "#{@product.name} has been added to your order")
+    redirect_back(fallback_location: root_path, notice: "#{@product.title} has been added to your order")
   end
 end
