@@ -1,4 +1,4 @@
-Given("the following product exist") do |table|
+Given("the following products exist") do |table|
   table.hashes.each do |product|
     create(:product, product)
   end
