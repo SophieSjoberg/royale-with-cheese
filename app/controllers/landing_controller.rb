@@ -7,7 +7,7 @@ class LandingController < ApplicationController
     movie_genre = Tmdb::Genre.movie_list.select{ |m| m.name == genre }.first
 
     if movie_genre.nil?
-      flash[:notice] = 'wrong entry'
+      flash[:alert] = 'wrong entry'
     else
       @movies = Tmdb::Discover.movie(
         sort_by: 'popularity.desc',
