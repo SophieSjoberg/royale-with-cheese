@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   devise_for :users
   root controller: :landing, action: :index
   post '/search', to: 'landing#search'
+  resources :orders, only: [:create, :update]
 end
