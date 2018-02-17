@@ -5,7 +5,7 @@ Mid-Course project for Craft Academy October 2017 Cohort.
 Royale with Cheese is an app to search movies by a specific genre.
 This was our first approach with APIs, we connected to
 https://www.themoviedb.org/documentation/api to get the results we wanted.
-We also made our first user authentication process with Devise and partially implemented Stripe.
+We also made our first user authentication process with Devise and implemented orders and order summary page.
 
 ## Contributors
 * Francesco Falchi: https://github.com/NegativeKarma
