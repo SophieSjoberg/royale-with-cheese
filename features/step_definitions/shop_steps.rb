@@ -9,6 +9,6 @@ When('I click on {string} button or link') do |button|
 end
 
 Then('I would like to see {string} with a description of {string} and a price of {string} $') do |title, description, price|
-  expected_output = "#{title} #{description} Price: #{price}"
+  expected_output = "#{title} - #{description} Price: #{price}"
   expect(page).to have_content expected_output
 end

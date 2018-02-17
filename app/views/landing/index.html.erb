@@ -10,19 +10,4 @@
     <% end %>
   </nav>
 
-<% if @movies %>
-  <% if @movies.results.any? %>
-    <div id="movies-header">
-      <h2>Results</h2>
-    </div>
-    <div class="movies">
-      <% @movies.results.take(5).each do |movie| %>
-        <div class="movie-prop">
-            <img src="http://image.tmdb.org/t/p/w185<%=movie.poster_path %>" alt="" >
-            <h4> <%= movie.title %> </h4> <br>
-            <p> <%= movie.overview %> </p>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-<% end %>
+<%= render 'partials/movies_search' %>
