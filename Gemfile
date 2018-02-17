@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'themoviedb-api', '~> 1.2'
 gem 'dotenv-rails'
+gem 'acts_as_shopping_cart'
 
 group :development, :test do
   gem 'pry-rails'

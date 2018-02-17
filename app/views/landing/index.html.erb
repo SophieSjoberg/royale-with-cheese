@@ -1,23 +1,13 @@
+<div class="header text-center text-warning">
+  <h1>Royale with Cheese</h1>
+  <h2>Movie suggestions</h2>
+  <img src="https://www.300feetout.com/wp-content/uploads/2016/12/holiday_2016_popcorn_cheese.jpg" width="385px" height="320px"/>
+</div>
+  <nav class="navbar navbar-light" id="movie-search">
+    <%= form_tag('/search#movies-header', class: 'form-inline') do %>
+      <%= text_field_tag :genre, "", class: 'movie-search form-control', placeholder: 'Movie Genre' %>
+      <%= submit_tag 'Search', class: 'movie-input btn btn-outline-primary my-2 my-sm-0' %>
+    <% end %>
+  </nav>
 
-<h1>Royale with Cheese</h1>
-<p>Movie suggestions</p>
-
-<%= form_tag(search_path) do %>
-  <%= text_field_tag :genre %>
-  <%= submit_tag 'search' %>
-<% end %>
-
-<% if @movies %>
-  <% if @movies.results.any? %>
-    <h2> Results </h2>
-      <ul>
-        <% @movies.results.take(5).each do |movie| %>
-        <li>
-          <img src="http://image.tmdb.org/t/p/w185<%=movie.poster_path %>" alt="" >
-          <b> <%= movie.title %> </b> <br>
-            <p> <%= movie.overview %> </p>
-        </li>
-        <% end %>
-      </ul>
-  <% end %>
-<% end %>
+<%= render 'partials/movies_search' %>
