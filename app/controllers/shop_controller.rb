@@ -1,4 +1,4 @@
-class WebshopController < ApplicationController
+class ShopController < ApplicationController
   def show
     @products = Product.all
   end

@@ -3,9 +3,9 @@
   <h2>Movie suggestions</h2>
   <img src="https://www.300feetout.com/wp-content/uploads/2016/12/holiday_2016_popcorn_cheese.jpg" width="385px" height="320px"/>
 </div>
-  <nav class="navbar navbar-light">
-    <%= form_tag(search_path, class: 'form-inline') do %>
-      <%= text_field_tag :genre, "", class: 'movie-input form-control', placeholder: 'Movie Genre' %>
+  <nav class="navbar navbar-light" id="movie-search">
+    <%= form_tag('/search#movies-header', class: 'form-inline') do %>
+      <%= text_field_tag :genre, "", class: 'movie-search form-control', placeholder: 'Movie Genre' %>
       <%= submit_tag 'Search', class: 'movie-input btn btn-outline-primary my-2 my-sm-0' %>
     <% end %>
   </nav>
@@ -25,3 +25,4 @@
       </ul>
   <% end %>
 <% end %>
+<%= render 'partials/movies_search' %>
