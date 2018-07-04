@@ -1,16 +1,16 @@
 <% if @movies %>
   <% if @movies.results.any? %>
     <div id="movies-header">
-      <h2>Results</h2>
+      <h2> Results </h2>
     </div>
     <div class="movies">
-      <% @movies.results.take(5).each do |movie| %>
+      <% @movies.results.take(6).each do |movie| %>
         <div class="movie-prop">
-            <img src="http://image.tmdb.org/t/p/w185<%=movie.poster_path %>" alt="" >
-            <h4> <%= movie.title %> </h4> <br>
-            <p> <%= movie.overview %> </p>
+          <img src="http://image.tmdb.org/t/p/w185<%=movie.poster_path %>" alt="" >
+          <h4> <%= movie.title %> </h4> <br>
+          <p> <%= movie.overview %> </p>
         </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
   <% end %>
 <% end %>
