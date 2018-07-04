@@ -6,6 +6,7 @@ Feature: Customer can see a summary of their order and total price
   Background:
     Given the following products exist
       | title   | description   | price |
+      | T-shirt | Blue t-shirt  | 50    |
       | Mug     | Nice mug      | 20    |
       | Gloves  | Stay warm     | 25    |
 

@@ -12,11 +12,11 @@ Feature: User can add products to order
 
   Scenario: User can add a product to the cart
     When I visit the "Shop" page
-    And I click on "Add to Order" for "T-shirt"
+    And I click on "Add to Order" for "Mug"
     Then an order should have been created in the database
-    And "T-shirt" should be an order item
+    And "Mug" should be an order item
     Then I should be redirected to the "Shop" page
-    And I should see "T-shirt has been added to your order"
+    And I should see "Mug has been added to your order"
 
   Scenario: User can add a second product to the cart
     When I visit the "Shop" page

@@ -5,9 +5,11 @@ Feature: User can access webshop page
 
   Background:
     Given the following products exist
+    Given the following products exist
       | title   | description   | price |
       | T-shirt | Blue t-shirt  | 50    |
       | Mug     | Nice mug      | 20    |
+      | Gloves  | Stay warm     | 25    |
 
   Scenario: Visitor sees a list of products on the webshop page
     When I visit the "Landing" page
