@@ -5,7 +5,6 @@ Feature: User can access webshop page
 
   Background:
     Given the following products exist
-    Given the following products exist
       | title   | description   | price |
       | T-shirt | Blue t-shirt  | 50    |
       | Mug     | Nice mug      | 20    |

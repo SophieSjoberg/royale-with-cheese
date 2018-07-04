@@ -16,12 +16,12 @@ Then('{string} should be an order item') do |product_name|
   expect(items_collection).to include product_name
 end
 
-# Given('there is an order with order item {string}') do |product|
-#   steps %(
-#     And I click on "Add to Order" for "#{product}"
-#     Then an order should have been created in the database
-#   )
-# end
+Given('there is an order with order item {string}') do |product|
+  steps %(
+    And I click on "Add to Order" for "#{product}"
+    Then an order should have been created in the database
+  )
+end
 
 Then('I should have {string} products in my order') do |count|
   expect(@order.order_items.count).to eq count.to_i

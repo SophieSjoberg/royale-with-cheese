@@ -3,18 +3,3 @@
 </div>
 
 <%= render 'partials/products' %>
-
-<div class="products">
-  <% @products.each do |product| %>
-  <div id="product-<%= product.id %>">
-    <span><%= product.title %> - <%= product.description %> Price: <%= product.price %> $</span>
-    <% if session[:order_id] %>
-      <%=button_to 'Add to Order', order_path(session[:order_id]), method: :put, params: {product: product}, class: 'btn btn-light'  %>
-    <% else %>
-      <%=button_to 'Add to Order', orders_path, params: {product: product}, class: 'btn btn-light'  %>
-    <% end %>
-  </div>
-  <% end %>
-</div>
-
-  <h2>Welcome Shop</h2>
